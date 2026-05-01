@@ -212,42 +212,196 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <div id="page-story" class="page">
       <h1 class="page-title">Your Story</h1>
       <p class="subtitle">You are Nurul, Group Finance Manager at Contoso Medical</p>
-      <div class="card">
-        <h2>The Scenario</h2>
-        <p>It is Monday morning. You have just returned from a hospital group leadership offsite and your inbox is overflowing. The CFO has called a Finance Committee review <strong>this Thursday</strong>, two days earlier than expected, following concerns raised by the Audit Committee about budget overruns in Q1 and a contract signed last quarter that "may have unfavourable terms."</p>
-        <br>
-        <p>On your desk you have:</p>
-        <ul style="padding-left:20px;line-height:2;margin-top:8px">
-          <li>📊 A 12-month Budget Variance report (Excel), last updated Friday</li>
-          <li>📋 A supplier quotation evaluation for new surgical consumables (Excel)</li>
-          <li>📄 The TechMed Healthcare Solutions contract signed last September (Word)</li>
-          <li>📝 Minutes of the last Procurement &amp; Finance Committee meeting (Word)</li>
-          <li>📚 The Group Finance &amp; Procurement Policy Manual (Word)</li>
-        </ul>
-        <br>
-        <p>Your goal: use M365 Copilot to analyse everything, surface the risks, prepare a CFO briefing pack, and build a smart agent your team can use going forward.</p>
-      </div>
-      <div class="card">
-        <h2>The Four Exercises</h2>
-        <div class="ex-grid">
-          <a class="ex-card" href="#" onclick="show('ex1')">
-            <div class="icon">🔍</div><h3>Exercise 1 · Researcher</h3>
-            <p>Use Copilot Chat to benchmark Contoso Medical's procurement policy against industry norms and regional hospital groups.</p>
-          </a>
-          <a class="ex-card" href="#" onclick="show('ex2')">
-            <div class="icon">📊</div><h3>Exercise 2 · Financial Analysis</h3>
-            <p>Open the Budget Variance Excel with Copilot. Identify the worst-performing departments, root-cause the overruns, and generate CFO commentary.</p>
-          </a>
-          <a class="ex-card" href="#" onclick="show('ex3')">
-            <div class="icon">📄</div><h3>Exercise 3 · Contract &amp; Reporting</h3>
-            <p>Use Copilot in Word to review the TechMed contract for policy breaches, then draft a Risk Summary and email to the CFO.</p>
-          </a>
-          <a class="ex-card" href="#" onclick="show('ex4')">
-            <div class="icon">🤖</div><h3>Exercise 4 · Agent Builder</h3>
-            <p>Build a Finance Policy Advisor agent using the M365 Agent Builder, grounded in the Policy Manual, so your team always has policy at their fingertips.</p>
-          </a>
+
+      <!-- IHH-style story panel -->
+      <div style="display:grid;grid-template-columns:220px 1fr;gap:0;border:1px solid var(--mgrey);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);margin-bottom:24px">
+        <!-- LEFT PANEL -->
+        <div style="background:linear-gradient(180deg,#0f2545 0%,#1e3a5f 100%);padding:24px 18px;display:flex;flex-direction:column;gap:11px">
+          <p style="margin:0;font-size:8px;letter-spacing:2px;font-weight:700;color:#93C5FD;text-transform:uppercase">M365 Copilot · Finance &amp; Procurement</p>
+          <h3 style="margin:0;font-size:19px;font-weight:800;color:#fff;line-height:1.2">From Data<br>to Decision</h3>
+          <div style="margin-top:4px">
+            <p style="margin:0 0 3px;font-size:7.5px;letter-spacing:1.5px;font-weight:700;color:#93C5FD;text-transform:uppercase">Persona</p>
+            <p style="margin:0;font-size:12.5px;font-weight:700;color:#fff">Nurul</p>
+            <p style="margin:2px 0 0;font-size:10.5px;color:#94a3b8">Group Finance Manager<br>Contoso Medical Group</p>
+          </div>
+          <div style="margin-top:4px">
+            <p style="margin:0 0 3px;font-size:7.5px;letter-spacing:1.5px;font-weight:700;color:#93C5FD;text-transform:uppercase">The Mission</p>
+            <p style="margin:0;font-size:10.5px;color:#cbd5e1;line-height:1.6">CFO moved the Finance Committee to Thursday. Budget overruns, a risky vendor contract, and a team without a policy tool. Clear it all in one morning.</p>
+          </div>
+          <div style="margin-top:4px;padding:10px;background:rgba(255,255,255,.06);border-radius:8px;border:1px solid rgba(255,255,255,.1)">
+            <p style="margin:0 0 3px;font-size:7.5px;letter-spacing:1.5px;font-weight:700;color:#93C5FD;text-transform:uppercase">The Punchline</p>
+            <p style="margin:0;font-size:11.5px;font-weight:700;font-style:italic;color:#fff;line-height:1.4">One morning. Ten tasks.<br>From research to agent.</p>
+          </div>
+        </div>
+        <!-- RIGHT PANEL -->
+        <div style="background:#F8FAFC;padding:20px 18px 14px">
+          <h3 style="margin:0 0 14px;font-size:16px;font-weight:700;color:var(--text)">Ten tasks across one morning</h3>
+
+          <!-- EX 1 -->
+          <div style="margin-bottom:12px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 1 &nbsp;·&nbsp; 25 min</span>
+              <span style="font-size:12px;font-weight:700;color:var(--text)">Researcher + Word</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#0369a1;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">01</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Researcher · Critique</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Benchmark the market</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#0369a1">Task 1</p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Benchmark procurement thresholds against IHH, KPJ, and regional peers. Critique enforces citation grounding on every claim.</p>
+                </div>
+              </div>
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#7c3aed;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">02</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Model Council</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Challenge the view</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#7c3aed">Task 2</p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Multiple AI models assess healthcare finance governance risks independently. The cover letter flags where they agree and diverge.</p>
+                </div>
+              </div>
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#1e3a5f;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">03</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Word Copilot</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Write the brief</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#1e3a5f">Task 3</p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Export Researcher report to Word. Copilot drafts a CFO briefing note with benchmarking table, risk register, and next steps.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EX 2 -->
+          <div style="margin-bottom:12px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 2 &nbsp;·&nbsp; 30 min</span>
+              <span style="font-size:12px;font-weight:700;color:var(--text)">Financial Analysis</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#15803d;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">04</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Excel Copilot</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Analyse the variance</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#15803d">Tasks 1–2 &nbsp;·&nbsp; <span style="background:#dcfce7;color:#166534;border-radius:3px;padding:0 4px;font-style:normal">📄 01 BudgetVariance.xlsx</span></p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Variance summary with RAG status, worst-performing departments flagged, and supplier quotation scoring.</p>
+                </div>
+              </div>
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#0f766e;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">05</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Excel Copilot</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Build the dashboard</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#0f766e">Tasks 3–4 &nbsp;·&nbsp; <span style="background:#ccfbf1;color:#115e59;border-radius:3px;padding:0 4px;font-style:normal">📄 01 BudgetVariance.xlsx</span></p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">CFO commentary drafted, then Copilot builds a Finance Committee dashboard — KPI row, RAG chart, trend line — for the board pack.</p>
+                </div>
+              </div>
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#0f4c75;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">06</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Analyst Agent</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Interrogate the data</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#0f4c75">Task 5</p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Drop in the budget data. Ask for pivot tables, persistent-overspend flags, and year-end exposure projection. No setup needed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EX 3 -->
+          <div style="margin-bottom:12px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 3 &nbsp;·&nbsp; 25 min</span>
+              <span style="font-size:12px;font-weight:700;color:var(--text)">Contract &amp; Reporting</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#1e3a5f;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">07</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Word Copilot</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Find the risks</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#1e3a5f">Task 1 &nbsp;·&nbsp; <span style="background:#e0f2fe;color:#0369a1;border-radius:3px;padding:0 4px;font-style:normal">📄 03 VendorContract.docx</span></p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Copilot reads the TechMed contract and surfaces every HIGH and MEDIUM risk clause with RM exposure estimates.</p>
+                </div>
+              </div>
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#075985;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">08</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Word Copilot</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Write the assessment</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#075985">Task 2</p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Draft a formal Contract Risk Assessment — risk register, combined RM exposure, overall rating, and next steps for the board pack.</p>
+                </div>
+              </div>
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#9d174d;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">09</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Outlook Copilot</span>
+                </div>
+                <div style="padding:8px;background:#fff">
+                  <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Email the CFO</p>
+                  <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#9d174d">Task 3</p>
+                  <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Copilot drafts a direct senior-to-senior email flagging the three HIGH-risk clauses and requesting a CFO decision before Thursday.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EX 4 -->
+          <div style="margin-bottom:14px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 4 &nbsp;·&nbsp; 20 min</span>
+              <span style="font-size:12px;font-weight:700;color:var(--text)">Build Your Agent</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr;gap:8px">
+              <div style="border:1px solid #CBD5E1;border-radius:7px;overflow:hidden">
+                <div style="background:#0f2545;padding:4px 8px;display:flex;align-items:center;gap:5px">
+                  <span style="font-size:9.5px;font-weight:800;color:rgba(255,255,255,.55)">10</span>
+                  <span style="font-size:7.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px">Agent Builder</span>
+                </div>
+                <div style="padding:8px;background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                  <div>
+                    <p style="margin:0 0 2px;font-size:11px;font-weight:700;color:var(--text)">Build the future</p>
+                    <p style="margin:0 0 5px;font-size:9px;font-style:italic;color:#0f2545">Choose your agent · facilitator-guided</p>
+                    <p style="margin:0;font-size:9.5px;color:var(--dgrey);line-height:1.5">Build a custom agent connected to your team's knowledge. Choose: Finance Policy Advisor, Procurement Policy Agent, or Contract Intelligence Assistant.</p>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:5px;justify-content:center">
+                    <div style="font-size:9px;color:var(--dgrey)">📄 Knowledge sources:</div>
+                    <div style="font-size:9px;background:#e0f2fe;color:#0369a1;border-radius:3px;padding:2px 6px">05 FinanceProcurementPolicies.docx</div>
+                    <div style="font-size:9px;background:#e0f2fe;color:#0369a1;border-radius:3px;padding:2px 6px">03 VendorContract.docx</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VALUE BAR -->
+          <div style="background:#fef9c3;border:1px solid #fbbf24;border-left:4px solid #f59e0b;border-radius:8px;padding:9px 14px;font-size:11.5px;color:#78350f">
+            <b>THE VALUE:</b> One Finance Manager. One morning. Research, analyse, review contracts, build a dashboard, and deploy a custom Copilot agent — all without leaving Microsoft 365.
+          </div>
         </div>
       </div>
+
+      <!-- TOOLS GRID -->
       <div class="card">
         <h2>M365 Copilot Tools You Will Use</h2>
         <div class="tool-grid">
@@ -255,10 +409,10 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
           <div class="tool-card"><div class="t-icon">📊</div><h4>Copilot in Excel</h4><p>Analyse spreadsheet data, explain formulas, generate chart commentary.</p></div>
           <div class="tool-card"><div class="t-icon">📝</div><h4>Copilot in Word</h4><p>Summarise, extract, rewrite, and draft documents. Great for contracts.</p></div>
           <div class="tool-card"><div class="t-icon">📧</div><h4>Copilot in Outlook</h4><p>Draft emails, summarise threads, suggest replies.</p></div>
-          <div class="tool-card"><div class="t-icon">🗣️</div><h4>Copilot in Teams</h4><p>Meeting summaries, action-item extraction, real-time chat assistance.</p></div>
           <div class="tool-card"><div class="t-icon">📈</div><h4>Copilot in PowerPoint</h4><p>Transform documents and data into polished presentations instantly.</p></div>
-          <div class="tool-card"><div class="t-icon">🤖</div><h4>Agent Builder</h4><p>Build custom agents grounded in your organisation's own documents and data, directly from Copilot Chat.</p></div>
-          <div class="tool-card"><div class="t-icon">🔗</div><h4>Copilot Pages</h4><p>Collaborate on AI-generated content in real-time with your team.</p></div>
+          <div class="tool-card"><div class="t-icon">🤖</div><h4>Agent Builder</h4><p>Build custom agents grounded in your organisation's own documents and data.</p></div>
+          <div class="tool-card"><div class="t-icon">🔍</div><h4>Researcher Agent</h4><p>Deep research with Critique and Model Council modes for cited, multi-model outputs.</p></div>
+          <div class="tool-card"><div class="t-icon">📉</div><h4>Analyst Agent</h4><p>AI-driven data analysis — pivot tables, charts, and calculations with no setup.</p></div>
         </div>
       </div>
     </div>
