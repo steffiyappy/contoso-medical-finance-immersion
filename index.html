@@ -364,14 +364,11 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
           <li>Is our 90-day auto-renewal notice standard or above average?</li>
           <li>Are our liability cap standards (12 months minimum) typical?</li>
         </ul>
-        <p style="margin-top:10px;font-size:.85rem;color:var(--dgrey)"><strong>Discussion:</strong> Did Critique and Model Council give different answers? Which did you trust more and why?</p>
       </div>
       <div class="card">
         <h2>Task 2 · Policy Manual Summary</h2>
         <p>Attach <strong>05_ContosoMedical_FinanceProcurementPolicies.docx</strong> to the Researcher agent and use the prompt below.</p>
         <div class="prompt-box" id="p1-2"><button class="copy-btn" onclick="copyPrompt('p1-2')">📋 Copy</button>I am reviewing the attached Contoso Medical Finance &amp; Procurement Policy Manual ahead of a Finance Committee meeting where the CFO will be asking questions about our governance thresholds. I need you to read the full document and extract a concise but complete reference summary covering the CAPEX approval authority matrix showing who must approve at each value band, the exact budget variance percentage thresholds that require escalation and the specific approver or body they must escalate to, the procurement method thresholds that determine when a single quote is sufficient versus when a formal RFQ or open tender is required along with the minimum number of suppliers at each level, and the three mandatory contract standards we must enforce on all vendor agreements covering the minimum liability cap duration, the required auto-renewal notice period, and the maximum permitted annual price escalation. For each item quote the exact policy section number. Format the output as a set of reference tables I can attach to my CFO briefing. If any of these areas are ambiguous or not explicitly addressed in the document, flag them clearly so I can raise them as policy gaps at the committee meeting.</div>
-        <h3>Discussion</h3>
-        <p>Share your summary with the group. Does everyone have the same three contract standards? What surprised you?</p>
       </div>
       <div class="card">
         <h2>Task 3 · Gap Analysis Setup</h2>
@@ -392,15 +389,11 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
         <h2>Task 1: Budget Variance Analysis</h2>
         <p>Open <strong>01_ContosoMedical_BudgetVariance.xlsx</strong> in Excel. Navigate to the <em>Monthly_PnL</em> sheet and open Copilot (Home ribbon → Copilot).</p>
         <div class="prompt-box" id="p2-1"><button class="copy-btn" onclick="copyPrompt('p2-1')">📋 Copy</button>I am the Head of Finance at Contoso Medical Group and I am preparing the Q1 Finance Committee pack using the budget variance data in this workbook. I need you to analyse the Monthly_PnL sheet and produce a Finance Committee-ready variance summary that shows the Group's overall cost position year-to-date expressed in both RM and as a percentage against budget, identifies the three departments with the largest adverse variances including the variance amount, the variance percentage, and a clear flag where the variance has exceeded the 10% threshold that triggers a mandatory CFO review and corrective action plan under our internal policy, highlights any department where performance is notably favourable versus budget as this is also useful context for the committee, and for the single worst-performing department identifies the largest individual cost line driving the overspend. Present the department analysis as a table with a RAG status column using Green for within 5%, Amber for 5 to 10%, and Red for over 10%. Below each Red department row add a one-sentence plain-English explanation of the likely driver based on the data visible in the sheet.</div>
-        <h3>Expected Finding</h3>
-        <p>Look for departments where the adverse variance exceeds 10%, our policy requires a CFO review and corrective action plan for these.</p>
       </div>
       <div class="card">
         <h2>Task 2: Supplier Quotation Scoring</h2>
         <p>Switch to <strong>02_ContosoMedical_SupplierQuotations.xlsx</strong>, <em>Scoring_Guide</em> sheet.</p>
         <div class="prompt-box" id="p2-2"><button class="copy-btn" onclick="copyPrompt('p2-2')">📋 Copy</button>I am evaluating supplier quotations for surgical consumables at Contoso Medical Group and I need to use this scoring matrix to produce a recommendation I can defend to the CFO and Finance Committee. Using the Scoring_Guide sheet in this workbook, first check every supplier against the mandatory disqualification criteria and clearly identify any supplier that must be eliminated along with the exact criterion they failed. Then for the remaining qualifying suppliers calculate the total weighted score for each one using the criteria weights defined in the sheet and rank them from highest to lowest, showing the individual score for every criterion so the reasoning is fully transparent. Identify the top-ranked supplier and explain the three specific evaluation areas where they most clearly outperform the second-ranked option. Also flag any areas where two suppliers score within five points of each other as these may warrant a clarification round before final award. Present the complete ranked scoring table followed by a short paragraph summarising the recommendation.</div>
-        <h3>Key Question</h3>
-        <p>Which supplier is disqualified and why? Does the disqualification change your recommendation?</p>
       </div>
       <div class="card">
         <h2>Task 3 · CFO Commentary Draft</h2>
@@ -411,12 +404,6 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
         <h2>Task 4 · Analyst Agent</h2>
         <p>The <strong>Analyst Agent</strong> is a built-in agent in Copilot Chat that can analyse data, build pivot tables, create charts, and run calculations — no Excel skills needed. Open <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a>, select <strong>Analyst</strong> from the agents panel, and upload <strong>01_ContosoMedical_BudgetVariance.xlsx</strong>.</p>
         <div class="prompt-box" id="p2-4"><button class="copy-btn" onclick="copyPrompt('p2-4')">📋 Copy</button>I am uploading the Contoso Medical Group budget variance workbook and I need the Analyst Agent to run a full quantitative analysis that I can present at the Finance Committee on Thursday. Using the Monthly_PnL sheet, build a pivot table showing actual expenditure versus budget for every department across all 12 months with a variance column and a variance percentage column, and apply RAG conditional formatting so cells exceeding 10% adverse variance appear red, 5 to 10% appear amber, and within budget appear green. Then generate a horizontal bar chart ranking the top 5 departments by total year-to-date adverse variance so the committee can see the biggest problems at a glance. Analyse the monthly trend data to identify any department that has overspent against budget for three or more consecutive months, because a persistent pattern like that suggests a structural budget problem rather than a timing issue, and flag those departments separately. Finally, project forward the total financial exposure for the rest of the year if every department currently in breach of the 10% threshold continues overspending at the same monthly run rate — I need this number to brief the CFO on worst-case exposure before the meeting.</div>
-        <h3>What to notice</h3>
-        <ul style="padding-left:20px;line-height:2">
-          <li>Analyst Agent writes and runs its own code to complete the analysis</li>
-          <li>No formulas or pivot table setup needed from you</li>
-          <li>You can follow up with plain English: "Now show me only the departments in the red zone"</li>
-        </ul>
       </div>
     </div>
 
