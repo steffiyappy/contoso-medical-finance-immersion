@@ -61,11 +61,7 @@ h1.page-title{font-size:1.7rem;color:var(--navy);margin-bottom:6px}
 .badge.amber{background:#FEF3C7;color:var(--amber)}
 .badge.red{background:#FEE2E2;color:var(--red)}
 
-/* ── agenda ──────────────────────────────────────── */
-table.agenda{width:100%;border-collapse:collapse;font-size:.9rem}
-table.agenda th{background:var(--navy);color:#fff;padding:8px 12px;text-align:left}
-table.agenda td{padding:8px 12px;border-bottom:1px solid var(--mgrey)}
-table.agenda tr:nth-child(even){background:var(--lgrey)}
+
 .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.78rem;font-weight:600}
 .pill-hands{background:#D1FAE5;color:var(--green)}
 .pill-brief{background:var(--sky);color:var(--blue)}
@@ -163,7 +159,6 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <nav>
       <div class="nav-section">Workshop</div>
       <a href="#" onclick="show('overview')" id="nav-overview" class="active">🏠 Overview</a>
-      <a href="#" onclick="show('agenda')"   id="nav-agenda">📅 Agenda</a>
       <a href="#" onclick="show('story')"    id="nav-story">🎭 Your Story</a>
       <a href="#" onclick="show('tools')"    id="nav-tools">🧰 M365 Tools</a>
       <a href="#" onclick="show('getstarted')" id="nav-getstarted">🚀 Get Started</a>
@@ -217,25 +212,6 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     </div>
 
     <!-- AGENDA -->
-    <div id="page-agenda" class="page">
-      <h1 class="page-title">Workshop Agenda</h1>
-      <p class="subtitle">Half-Day · 09:00 – 12:45</p>
-      <div class="card">
-        <table class="agenda">
-          <tr><th>Time</th><th>Activity</th><th>Format</th><th>Duration</th></tr>
-          <tr><td>09:00</td><td><strong>Welcome &amp; Scene Setting</strong><br>Microsoft intro · Contoso Medical story · Copilot overview</td><td><span class="pill pill-brief">Plenary</span></td><td>20 min</td></tr>
-          <tr><td>09:20</td><td><strong>GCSE Prompting Framework</strong><br>Goal · Context · Source · Expectation — live demo</td><td><span class="pill pill-brief">Demo</span></td><td>15 min</td></tr>
-          <tr><td>09:35</td><td><strong>Exercise 1 — Researcher</strong><br>Use BizChat to understand industry benchmarks and summarise policy context</td><td><span class="pill pill-hands">Hands-on</span></td><td>25 min</td></tr>
-          <tr><td>10:00</td><td><strong>Exercise 2 — Financial Analysis</strong><br>Budget Variance Excel analysis + automated commentary with Copilot in Excel</td><td><span class="pill pill-hands">Hands-on</span></td><td>30 min</td></tr>
-          <tr><td>10:30</td><td><span class="pill pill-break">☕ Break</span></td><td></td><td>15 min</td></tr>
-          <tr><td>10:45</td><td><strong>Exercise 3 — Contract &amp; Reporting</strong><br>Vendor contract risk analysis + board summary in Word and Outlook</td><td><span class="pill pill-hands">Hands-on</span></td><td>35 min</td></tr>
-          <tr><td>11:20</td><td><strong>Exercise 4 — Agent Builder</strong><br>Design a Finance Policy Advisor agent in Copilot Studio</td><td><span class="pill pill-hands">Hands-on</span></td><td>35 min</td></tr>
-          <tr><td>11:55</td><td><strong>Group Share-Out &amp; Q&amp;A</strong><br>Each team presents one key finding or agent demo</td><td><span class="pill pill-brief">Plenary</span></td><td>25 min</td></tr>
-          <tr><td>12:20</td><td><strong>Wrap-Up &amp; Next Steps</strong><br>Value recap · Adoption roadmap · Resources</td><td><span class="pill pill-brief">Plenary</span></td><td>15 min</td></tr>
-          <tr><td>12:35</td><td colspan="3"><em>Optional: Networking lunch (venue-dependent)</em></td></tr>
-        </table>
-      </div>
-    </div>
 
     <!-- YOUR STORY -->
     <div id="page-story" class="page">
