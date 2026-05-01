@@ -167,7 +167,6 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
       <a href="#" onclick="show('ex3')"  id="nav-ex3">📄 Ex 3 · Contract &amp; Reports</a>
       <a href="#" onclick="show('ex4')"  id="nav-ex4">🤖 Ex 4 · Agent Builder</a>
       <div class="nav-section">Resources</div>
-      <a href="#" onclick="show('files')" id="nav-files">📁 Workshop Files</a>
       <a href="#" onclick="show('tips')"  id="nav-tips">💡 Prompting Tips</a>
     </nav>
   </div>
@@ -270,11 +269,44 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <!-- GET STARTED -->
     <div id="page-getstarted" class="page">
       <h1 class="page-title">Get Started</h1>
-      <p class="subtitle">Three steps before the workshop begins</p>
+      <p class="subtitle">Download your files, verify your licence, and you are ready</p>
       <div class="card">
+        <h2>Workshop Files</h2>
+        <p style="margin-bottom:12px">Download all 5 files and save them to your OneDrive <strong>Documents</strong> folder so Copilot can access them during the exercises.</p>
+        <table class="files">
+          <tr><th>#</th><th>File Name</th><th>Type</th><th>Used In</th><th>Description</th></tr>
+          <tr>
+            <td>1</td>
+            <td><a href="files/01_ContosoMedical_BudgetVariance.xlsx" download>01_ContosoMedical_BudgetVariance.xlsx</a></td>
+            <td>📊 Excel</td><td>Ex 2</td><td>12-month P&amp;L with budget vs actual, department KPI dashboard, 3 sheets</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="files/02_ContosoMedical_SupplierQuotations.xlsx" download>02_ContosoMedical_SupplierQuotations.xlsx</a></td>
+            <td>📊 Excel</td><td>Ex 2</td><td>Supplier comparison, TCO analysis, and weighted scoring guide for 4 suppliers</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="files/03_ContosoMedical_VendorContract.docx" download>03_ContosoMedical_VendorContract.docx</a></td>
+            <td>📝 Word</td><td>Ex 1, 3</td><td>TechMed Healthcare Solutions contract with 4 policy-breach risk clauses embedded</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a href="files/04_ContosoMedical_CommitteeMeeting_Transcript.docx" download>04_ContosoMedical_CommitteeMeeting_Transcript.docx</a></td>
+            <td>📝 Word</td><td>Ex 3</td><td>Finance &amp; Procurement Committee meeting transcript with 10 action items</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a href="files/05_ContosoMedical_FinanceProcurementPolicies.docx" download>05_ContosoMedical_FinanceProcurementPolicies.docx</a></td>
+            <td>📝 Word</td><td>Ex 1, 3, 4</td><td>8-section policy manual covering CAPEX, procurement thresholds, contract standards, ESG</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card">
+        <h2>Before You Start</h2>
         <div class="step"><div class="step-num">1</div><div class="step-body">
-          <strong>Download all workshop files</strong><br>
-          Go to <a href="#" onclick="show('files')">Workshop Files</a> and save all 5 files to your OneDrive <em>Documents</em> folder so Copilot can access them.
+          <strong>Save files to OneDrive</strong><br>
+          Open OneDrive, navigate to <strong>My Files → Documents</strong>, create a folder called <em>Copilot Immersion</em> and upload all 5 files. Wait for sync to complete (green tick icons).
         </div></div>
         <div class="step"><div class="step-num">2</div><div class="step-body">
           <strong>Verify your Copilot licence</strong><br>
@@ -282,17 +314,17 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
         </div></div>
         <div class="step"><div class="step-num">3</div><div class="step-body">
           <strong>Open Copilot Chat</strong><br>
-          Navigate to <a href="https://m365.cloud.microsoft/chat" target="_blank">m365.cloud.microsoft/chat</a>, this is Copilot Chat, your primary Copilot interface for Exercises 1 and 3.
+          Navigate to <a href="https://m365.cloud.microsoft/chat" target="_blank">m365.cloud.microsoft/chat</a>. Type <strong>@</strong> and look for the files by name to confirm Copilot can see them.
         </div></div>
       </div>
       <div class="card">
         <h2>Tips Before You Start</h2>
         <ul style="padding-left:20px;line-height:2">
-          <li>Use <strong>specific, context-rich prompts</strong>, vague prompts return vague results</li>
+          <li>Use <strong>specific, context-rich prompts</strong> — vague prompts return vague results</li>
           <li>Always <strong>reference your file by name</strong> when prompting about it</li>
-          <li>If results are unexpected, <strong>rephrase and try again</strong>, iteration is normal</li>
-          <li>Use the <strong>📋 Copy</strong> buttons to copy prompts exactly</li>
-          <li>Team up, compare outputs and discuss differences</li>
+          <li>If results are unexpected, <strong>rephrase and try again</strong> — iteration is normal</li>
+          <li>Use the <strong>📋 Copy</strong> buttons to copy prompts exactly as written</li>
+          <li>Team up — compare outputs and discuss differences</li>
         </ul>
       </div>
     </div>
@@ -325,7 +357,7 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
       <div class="card">
         <h2>Task 1 · Industry Benchmarking</h2>
         <p>With the Researcher agent open, use the prompt below:</p>
-        <div class="prompt-box" id="p1-1"><button class="copy-btn" onclick="copyPrompt('p1-1')">📋 Copy</button>I work in Finance at a private hospital group in Malaysia. Summarise best-practice procurement thresholds for private healthcare groups in Southeast Asia, covering: single-quote limits, RFQ/tender thresholds, and standard auto-renewal notice periods for vendor contracts. Present your answer as a comparison table and highlight where practices vary by hospital group size.</div>
+        <div class="prompt-box" id="p1-1"><button class="copy-btn" onclick="copyPrompt('p1-1')">📋 Copy</button>I am the Head of Finance at Contoso Medical Group, a private hospital group in Malaysia with four facilities and approximately RM 280 million in annual operating expenditure. Our CFO has asked me to benchmark our procurement governance framework before Thursday's Finance Committee review. I need you to research how comparable private hospital groups in Southeast Asia — specifically IHH Healthcare, KPJ Healthcare, Ramsay Sime Darby, and Bangkok Dusit Medical Services — structure their procurement thresholds, including single-quote purchase limits, the value at which a formal RFQ requiring at least three supplier quotes is triggered, open tender thresholds, standard notice periods required to prevent auto-renewal of vendor contracts, and typical liability cap durations in technology and managed-services agreements. Present your findings as a comparison table with each hospital group as a column and each policy dimension as a row. In a separate paragraph below the table, highlight the two or three areas where our practice is likely to differ most significantly from regional peers, and flag any areas where tighter controls are generally considered better governance practice in the healthcare sector.</div>
         <h3>What to look for</h3>
         <ul style="padding-left:20px;line-height:2">
           <li>How does our RM 10K single-quote limit compare to peers?</li>
@@ -337,13 +369,13 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
       <div class="card">
         <h2>Task 2 · Policy Manual Summary</h2>
         <p>Attach <strong>05_ContosoMedical_FinanceProcurementPolicies.docx</strong> to the Researcher agent and use the prompt below.</p>
-        <div class="prompt-box" id="p1-2"><button class="copy-btn" onclick="copyPrompt('p1-2')">📋 Copy</button>Using the attached Finance &amp; Procurement Policy Manual, provide a structured one-page executive summary covering: (1) CAPEX approval authority thresholds, (2) budget variance escalation rules, (3) procurement tender thresholds, and (4) the three most important contract standards (liability cap, auto-renewal notice, price escalation). Format as a table for each section.</div>
+        <div class="prompt-box" id="p1-2"><button class="copy-btn" onclick="copyPrompt('p1-2')">📋 Copy</button>I am reviewing the attached Contoso Medical Finance &amp; Procurement Policy Manual ahead of a Finance Committee meeting where the CFO will be asking questions about our governance thresholds. I need you to read the full document and extract a concise but complete reference summary covering the CAPEX approval authority matrix showing who must approve at each value band, the exact budget variance percentage thresholds that require escalation and the specific approver or body they must escalate to, the procurement method thresholds that determine when a single quote is sufficient versus when a formal RFQ or open tender is required along with the minimum number of suppliers at each level, and the three mandatory contract standards we must enforce on all vendor agreements covering the minimum liability cap duration, the required auto-renewal notice period, and the maximum permitted annual price escalation. For each item quote the exact policy section number. Format the output as a set of reference tables I can attach to my CFO briefing. If any of these areas are ambiguous or not explicitly addressed in the document, flag them clearly so I can raise them as policy gaps at the committee meeting.</div>
         <h3>Discussion</h3>
         <p>Share your summary with the group. Does everyone have the same three contract standards? What surprised you?</p>
       </div>
       <div class="card">
         <h2>Task 3 · Gap Analysis Setup</h2>
-        <div class="prompt-box" id="p1-3"><button class="copy-btn" onclick="copyPrompt('p1-3')">📋 Copy</button>Based on the Policy Manual I attached, draft five questions I should ask when reviewing any new vendor contract to ensure it complies with Contoso Medical's policies. Make the questions specific enough that a non-lawyer Finance Manager could use them as a checklist.</div>
+        <div class="prompt-box" id="p1-3"><button class="copy-btn" onclick="copyPrompt('p1-3')">📋 Copy</button>Using the Contoso Medical Finance &amp; Procurement Policy Manual I have attached, I need you to build a practical pre-sign-off contract review checklist for Finance Managers on my team who are not legal specialists and will be reviewing vendor contracts on a regular basis. The checklist should have eight specific yes or no questions covering the highest-risk contract areas we deal with most frequently — particularly liability cap adequacy, auto-renewal notice requirements, data and IP ownership, annual price escalation limits, and termination for convenience rights. For each question in the checklist, include the specific policy section number the question is derived from, clear instructions on what language to look for in the contract when checking this item, a plain-English explanation of what would constitute a policy breach, and the exact escalation action the Finance Manager should take if the answer is No. Format it as a table so it can be printed and used as a physical sign-off checklist. The tone should be practical and jargon-free — these are Finance professionals, not lawyers.</div>
         <p style="margin-top:10px"><em>Save this checklist — you will use it in Exercise 3.</em></p>
       </div>
     </div>
@@ -357,26 +389,34 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
         <p>Open the Budget Variance workbook in Excel. Use Copilot in Excel to surface the worst-performing departments, understand the root causes, score the supplier quotations, and generate ready-to-use CFO commentary for Thursday's committee pack.</p>
       </div>
       <div class="card">
-        <h2>Task 1, Budget Variance Analysis</h2>
+        <h2>Task 1: Budget Variance Analysis</h2>
         <p>Open <strong>01_ContosoMedical_BudgetVariance.xlsx</strong> in Excel. Navigate to the <em>Monthly_PnL</em> sheet and open Copilot (Home ribbon → Copilot).</p>
-        <div class="prompt-box" id="p2-1"><button class="copy-btn" onclick="copyPrompt('p2-1')">📋 Copy</button>Analyse this budget variance data. Identify the top 3 departments with the largest unfavourable variances year-to-date. For each, calculate the variance as a percentage of budget and flag which departments have exceeded the 10% escalation threshold per our internal policy. Present the results as a table with a RAG status column.</div>
+        <div class="prompt-box" id="p2-1"><button class="copy-btn" onclick="copyPrompt('p2-1')">📋 Copy</button>I am the Head of Finance at Contoso Medical Group and I am preparing the Q1 Finance Committee pack using the budget variance data in this workbook. I need you to analyse the Monthly_PnL sheet and produce a Finance Committee-ready variance summary that shows the Group's overall cost position year-to-date expressed in both RM and as a percentage against budget, identifies the three departments with the largest adverse variances including the variance amount, the variance percentage, and a clear flag where the variance has exceeded the 10% threshold that triggers a mandatory CFO review and corrective action plan under our internal policy, highlights any department where performance is notably favourable versus budget as this is also useful context for the committee, and for the single worst-performing department identifies the largest individual cost line driving the overspend. Present the department analysis as a table with a RAG status column using Green for within 5%, Amber for 5 to 10%, and Red for over 10%. Below each Red department row add a one-sentence plain-English explanation of the likely driver based on the data visible in the sheet.</div>
         <h3>Expected Finding</h3>
         <p>Look for departments where the adverse variance exceeds 10%, our policy requires a CFO review and corrective action plan for these.</p>
       </div>
       <div class="card">
-        <h2>Task 2, Supplier Quotation Scoring</h2>
+        <h2>Task 2: Supplier Quotation Scoring</h2>
         <p>Switch to <strong>02_ContosoMedical_SupplierQuotations.xlsx</strong>, <em>Scoring_Guide</em> sheet.</p>
-        <div class="prompt-box" id="p2-2"><button class="copy-btn" onclick="copyPrompt('p2-2')">📋 Copy</button>Review the supplier scoring matrix on this sheet. Identify which supplier(s) should be automatically disqualified based on the disqualification criteria shown. Then re-rank the remaining qualifying suppliers by overall weighted score. Explain your reasoning for any disqualification.</div>
+        <div class="prompt-box" id="p2-2"><button class="copy-btn" onclick="copyPrompt('p2-2')">📋 Copy</button>I am evaluating supplier quotations for surgical consumables at Contoso Medical Group and I need to use this scoring matrix to produce a recommendation I can defend to the CFO and Finance Committee. Using the Scoring_Guide sheet in this workbook, first check every supplier against the mandatory disqualification criteria and clearly identify any supplier that must be eliminated along with the exact criterion they failed. Then for the remaining qualifying suppliers calculate the total weighted score for each one using the criteria weights defined in the sheet and rank them from highest to lowest, showing the individual score for every criterion so the reasoning is fully transparent. Identify the top-ranked supplier and explain the three specific evaluation areas where they most clearly outperform the second-ranked option. Also flag any areas where two suppliers score within five points of each other as these may warrant a clarification round before final award. Present the complete ranked scoring table followed by a short paragraph summarising the recommendation.</div>
         <h3>Key Question</h3>
         <p>Which supplier is disqualified and why? Does the disqualification change your recommendation?</p>
       </div>
       <div class="card">
-        <h2>Task 3, CFO Commentary Draft</h2>
-        <div class="prompt-box" id="p2-3"><button class="copy-btn" onclick="copyPrompt('p2-3')">📋 Copy</button>Based on the budget variance data in the Monthly_PnL sheet, write a 150-word CFO commentary for the Q1 Finance Committee pack. The commentary should: (1) state the Group's overall budget position, (2) highlight the two most significant unfavourable variances by department, (3) note one area of positive performance, and (4) state the next management action. Use formal finance language.</div>
-        <div style="margin-top:10px;padding:12px;background:#FEF3C7;border-left:4px solid var(--amber);border-radius:6px">
-          <strong>⭐ Bonus, Analyst Agent</strong><br>
-          <small>If you finish early, try asking Copilot: "Create a pivot table showing revenue vs budget by department for all 12 months, with conditional formatting to highlight months where variance exceeds 10%." Then use Copilot to generate a chart from the pivot table.</small>
-        </div>
+        <h2>Task 3 · CFO Commentary Draft</h2>
+        <p>Stay in <strong>01_ContosoMedical_BudgetVariance.xlsx</strong> with Copilot in Excel open.</p>
+        <div class="prompt-box" id="p2-3"><button class="copy-btn" onclick="copyPrompt('p2-3')">📋 Copy</button>Using the budget variance data visible in the Monthly_PnL sheet of this workbook, draft the CFO commentary section for Contoso Medical Group's Q1 Finance Committee board pack. The commentary should open by stating the Group's overall cost position for the quarter in both RM and percentage terms against budget, then move into a substantive discussion of the two departments with the most significant adverse variances — naming each department, quantifying the variance, and where the data allows it, identifying the most likely cost driver. It should then briefly acknowledge the one department that has performed notably well against budget to give the committee a balanced view. The commentary must explicitly state which departments have breached the 10% variance threshold that triggers a mandatory corrective action plan under our internal policy, and close with a clear statement of the management actions proposed and the expected timeline for resolution. Write in continuous prose — no bullet points or numbered lists. The tone should be formal and direct, suitable for a Board Audit Committee pack. Target length is 200 to 220 words.</div>
+      </div>
+      <div class="card">
+        <h2>Task 4 · Analyst Agent</h2>
+        <p>The <strong>Analyst Agent</strong> is a built-in agent in Copilot Chat that can analyse data, build pivot tables, create charts, and run calculations — no Excel skills needed. Open <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a>, select <strong>Analyst</strong> from the agents panel, and upload <strong>01_ContosoMedical_BudgetVariance.xlsx</strong>.</p>
+        <div class="prompt-box" id="p2-4"><button class="copy-btn" onclick="copyPrompt('p2-4')">📋 Copy</button>I am uploading the Contoso Medical Group budget variance workbook and I need the Analyst Agent to run a full quantitative analysis that I can present at the Finance Committee on Thursday. Using the Monthly_PnL sheet, build a pivot table showing actual expenditure versus budget for every department across all 12 months with a variance column and a variance percentage column, and apply RAG conditional formatting so cells exceeding 10% adverse variance appear red, 5 to 10% appear amber, and within budget appear green. Then generate a horizontal bar chart ranking the top 5 departments by total year-to-date adverse variance so the committee can see the biggest problems at a glance. Analyse the monthly trend data to identify any department that has overspent against budget for three or more consecutive months, because a persistent pattern like that suggests a structural budget problem rather than a timing issue, and flag those departments separately. Finally, project forward the total financial exposure for the rest of the year if every department currently in breach of the 10% threshold continues overspending at the same monthly run rate — I need this number to brief the CFO on worst-case exposure before the meeting.</div>
+        <h3>What to notice</h3>
+        <ul style="padding-left:20px;line-height:2">
+          <li>Analyst Agent writes and runs its own code to complete the analysis</li>
+          <li>No formulas or pivot table setup needed from you</li>
+          <li>You can follow up with plain English: "Now show me only the departments in the red zone"</li>
+        </ul>
       </div>
     </div>
 
@@ -389,9 +429,9 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
         <p>Review the TechMed contract for compliance with Contoso Medical's procurement policies. Surface hidden risk clauses, compare them against policy standards, then draft a Risk Summary and a email to the CFO to the CFO.</p>
       </div>
       <div class="card">
-        <h2>Task 1, Contract Risk Extraction</h2>
+        <h2>Task 1: Contract Risk Extraction</h2>
         <p>Open <strong>03_ContosoMedical_VendorContract.docx</strong> in Word. Open Copilot from the Home ribbon.</p>
-        <div class="prompt-box" id="p3-1"><button class="copy-btn" onclick="copyPrompt('p3-1')">📋 Copy</button>Review this vendor contract and identify all clauses that could be considered HIGH or MEDIUM risk for Contoso Medical. For each risk clause, state: (1) the clause number, (2) the risk description, (3) why it is problematic, and (4) what the recommended standard should be. Present as a table.</div>
+        <div class="prompt-box" id="p3-1"><button class="copy-btn" onclick="copyPrompt('p3-1')">📋 Copy</button>I need to review this TechMed Healthcare Solutions contract before raising it at Thursday's Finance Committee because our Audit Committee has flagged it as potentially having unfavourable terms. Read the full contract and identify every clause that creates a financial, legal, or operational risk for Contoso Medical. For each risk clause you find, quote the exact problematic contract language, explain in plain English what the risk is and why it matters to a hospital group, estimate the financial or operational exposure it creates for Contoso Medical quantified in RM wherever the contract value makes this calculable, describe what the market-standard or best-practice position for this clause type should be, and suggest alternative wording that would adequately protect Contoso Medical's interests. Assign each risk a rating of HIGH, MEDIUM, or LOW based on the magnitude of potential exposure and likelihood of it being triggered. Present as a table sorted by risk level with the highest risks first so the Finance Committee sees the most critical issues immediately.</div>
         <h3>What You Should Find</h3>
         <table class="risk">
           <tr><th>Clause</th><th>Risk Level</th><th>Issue</th><th>Policy Standard</th></tr>
@@ -402,34 +442,34 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
         </table>
       </div>
       <div class="card">
-        <h2>Task 2, Risk Summary Document</h2>
-        <div class="prompt-box" id="p3-2"><button class="copy-btn" onclick="copyPrompt('p3-2')">📋 Copy</button>Using the risk clauses you identified, draft a one-page Contract Risk Summary for the Finance Committee. Include: (1) a header with contract details (vendor, value, term), (2) a risk table with all HIGH and MEDIUM risks flagged, (3) a recommended action for each risk, and (4) a conclusion with an overall risk rating (High / Medium / Low) and recommended next steps. Use professional business language.</div>
+        <h2>Task 2: Risk Summary Document</h2>
+        <div class="prompt-box" id="p3-2"><button class="copy-btn" onclick="copyPrompt('p3-2')">📋 Copy</button>Using the risk analysis you have just completed on the TechMed contract, now produce a formal Contract Risk Assessment document that I can attach to the Finance Committee board pack. The document should open with an executive summary block showing the vendor name, total contract value, commencement and expiry dates, and critically the auto-renewal trigger date so the committee understands the time pressure. Follow this with a risk register table covering every HIGH and MEDIUM risk clause, showing the clause number, the risk in plain English, the financial exposure in RM, and the specific remediation action I am recommending. Below the risk register include a single-line total showing the combined worst-case financial exposure from all HIGH-risk clauses combined — this is the number the CFO and committee will focus on. Then write a short standalone paragraph giving an overall contract risk rating of High, Medium, or Low with a clear justification. Close with a next steps section naming three specific actions with recommended owners and timelines. Write all narrative sections in formal business English with no bullet points as this document will be read by Board members.</div>
         <p style="margin-top:10px"><em>Tip: Copy Copilot's output and paste into a new Word doc. Then use Copilot to refine the tone: "Rewrite this in a more formal board-report style."</em></p>
       </div>
       <div class="card">
-        <h2>Task 3, CFO Email Draft</h2>
+        <h2>Task 3: CFO Email Draft</h2>
         <p>Open Outlook and start a new email to your CFO (use your facilitator's email for demo purposes). Open Copilot Draft with me.</p>
-        <div class="prompt-box" id="p3-3"><button class="copy-btn" onclick="copyPrompt('p3-3')">📋 Copy</button>Draft an email to the Group CFO flagging urgent contract risks in the TechMed Healthcare Solutions agreement. The email should: (1) be professional and concise (under 200 words), (2) summarise the three HIGH risk clauses and one MEDIUM risk, (3) state the financial exposure (liability cap = RM 462,500 vs policy standard of RM 925,000 minimum), and (4) recommend immediate renegotiation of clauses 5.2, 7.3 and 9.1 before the next auto-renewal date. Subject: Urgent: TechMed Contract Risk Review, Finance Committee Input Required.</div>
+        <div class="prompt-box" id="p3-3"><button class="copy-btn" onclick="copyPrompt('p3-3')">📋 Copy</button>Draft an email from me, Nurul, Head of Finance at Contoso Medical Group, to the Group CFO flagging an urgent issue with the TechMed Healthcare Solutions contract that needs to be addressed before Thursday's Finance Committee and before the contract auto-renews. The email should open with a single sentence that tells the CFO exactly what the problem is and why it cannot wait, open the body with a brief factual statement of the contract value and the auto-renewal date so the time pressure is immediately clear, then walk through the three HIGH-risk clauses in a concise and readable way — each one should mention the clause number, what the issue is in plain English, and the financial exposure or policy gap it creates for Contoso Medical. After covering the HIGH risks, briefly note the MEDIUM-risk clause so the CFO has the full picture. State the combined worst-case financial exposure from all HIGH risks in a single RM figure. Make a clear and specific recommendation on what action to take — do not leave it open-ended. Close with a direct ask of the CFO stating exactly what decision or instruction I need from them and by when. Keep the total email under 220 words and write it in a professional but direct senior-to-senior tone.</div>
         <div style="margin-top:16px">
           <strong>⭐ Bonus, Cowork with Copilot</strong>
           <details><summary>Bonus A: Cross-file synthesis</summary><div class="inner">
             <p>In Copilot Chat, attach both the contract (File 03) and the Policy Manual (File 05). Ask:</p>
-            <div class="prompt-box" id="pb3-a"><button class="copy-btn" onclick="copyPrompt('pb3-a')">📋 Copy</button>Compare the attached TechMed vendor contract against the Contoso Medical Finance &amp; Procurement Policy Manual. List every clause in the contract that breaches or deviates from the policies in the manual. For each deviation, quote the relevant policy clause and the offending contract clause side by side.</div>
+            <div class="prompt-box" id="pb3-a"><button class="copy-btn" onclick="copyPrompt('pb3-a')">📋 Copy</button>I am attaching two documents — the TechMed Healthcare Solutions vendor contract and the Contoso Medical Finance and Procurement Policy Manual. I need you to act as a contract compliance reviewer and systematically cross-reference every material clause in the TechMed contract against the policy standards set out in the manual. For every area where the contract deviates from what the policy requires, show me a side-by-side comparison with the policy section number and its exact requirement on one side and the contract clause number and its actual wording on the other side, describe the nature of the deviation in plain English such as whether it falls below a minimum threshold, omits a required protection, or directly contradicts the policy, and rate each deviation as HIGH, MEDIUM, or LOW risk. Once you have completed the full comparison, write a concluding paragraph that gives me a clear overall assessment of whether this contract can be approved as-is, should be approved only with specific conditions attached, or must be sent back to TechMed for renegotiation before Contoso Medical can sign it.</div>
           </div></details>
           <details><summary>Bonus B: Meeting transcript action items</summary><div class="inner">
             <p>Attach File 04 (Meeting Transcript) to Copilot Chat:</p>
-            <div class="prompt-box" id="pb3-b"><button class="copy-btn" onclick="copyPrompt('pb3-b')">📋 Copy</button>Summarise this Finance &amp; Procurement Committee meeting transcript. Extract: (1) all action items with owner and due date, (2) all decisions made, and (3) any unresolved issues that need follow-up. Format the action items as a table.</div>
+            <div class="prompt-box" id="pb3-b"><button class="copy-btn" onclick="copyPrompt('pb3-b')">📋 Copy</button>I am attaching the transcript of the Contoso Medical Finance and Procurement Committee meeting and I need a comprehensive structured summary that I can circulate to attendees and share with the CFO who was unable to attend. Read the full transcript and extract every formal decision that was made during the meeting, quoting the resolution as it was stated. Then build a complete action item register as a table showing each action, the person responsible, the due date, and a priority rating, and flag any action whose due date has already passed based on the dates mentioned in the transcript as these are now overdue and need immediate follow-up. Separately list all unresolved issues or questions that were raised but not concluded during the meeting, noting for each one what additional information or decision is still needed before it can be closed. Finally write a short executive summary of three to four sentences covering the key outcomes of the meeting that I can paste into an email to the CFO as a concise update.</div>
           </div></details>
           <details><summary>Bonus C: PowerPoint summary deck</summary><div class="inner">
             <p>In PowerPoint, start a new presentation and open Copilot:</p>
-            <div class="prompt-box" id="pb3-c"><button class="copy-btn" onclick="copyPrompt('pb3-c')">📋 Copy</button>Create a 6-slide Finance Committee presentation covering: Slide 1 title, Slide 2 Q1 budget overview (3 key points), Slide 3 top 3 department variances, Slide 4 TechMed contract risk summary (4 risk clauses), Slide 5 recommended actions (bullet list), Slide 6 next steps and timeline. Use a professional blue corporate theme.</div>
+            <div class="prompt-box" id="pb3-c"><button class="copy-btn" onclick="copyPrompt('pb3-c')">📋 Copy</button>I need to build a Finance Committee briefing deck for Contoso Medical Group's Q1 review and I want you to create the full presentation in PowerPoint with six slides. The first slide should be a clean title slide with the presentation title Q1 Finance and Procurement Review, the organisation name Contoso Medical Group, the audience Finance Committee, and the current month and year. The second slide should show a Group Financial Snapshot with three headline metrics — the overall budget position, the largest single department adverse variance, and the total number of departments that have breached the 10% escalation threshold — each with a clear RAG status indicator so the committee can absorb the key numbers in seconds. The third slide should cover the top three department variances with one department per column showing the variance amount in RM, the variance as a percentage, and a single line identifying the root cause. The fourth slide should present the TechMed contract risk register as a compact table showing clause number, risk rating, and financial exposure in RM for each of the four identified risk clauses. The fifth slide should list three specific recommended actions each with a named owner and a deadline. The sixth slide should be a Decision Required slide that states plainly what the Finance Committee is being asked to approve or formally note at this meeting. Use a professional navy and white corporate design throughout and keep all slide text to headline-level — no full sentences in bullet points.</div>
           </div></details>
           <details><summary>Bonus D: Supplier recommendation memo</summary><div class="inner">
-            <div class="prompt-box" id="pb3-d"><button class="copy-btn" onclick="copyPrompt('pb3-d')">📋 Copy</button>Based on the supplier quotation evaluation data (attach File 02), draft a one-page procurement recommendation memo for the CFO recommending the winning supplier for surgical consumables. Include: the winning supplier name, overall score, key strengths vs competitors, why the disqualified supplier was eliminated, and commercial terms recommended for negotiation.</div>
+            <div class="prompt-box" id="pb3-d"><button class="copy-btn" onclick="copyPrompt('pb3-d')">📋 Copy</button>Using the supplier quotation evaluation workbook I have attached, draft a formal Procurement Recommendation Memorandum addressed to the Group CFO requesting approval to award the surgical consumables contract. The memo should open with a From/To/Date/Subject header and then provide a brief description of the procurement exercise covering what was being sourced, how many suppliers participated, and the weighted evaluation methodology that was applied. Present the recommended supplier by name and show their total weighted score alongside a breakdown of their individual scores across the key evaluation criteria so the CFO can see exactly why they ranked first. Explain clearly why any disqualified supplier was eliminated, naming the specific disqualification criterion that was breached. Then provide a direct head-to-head comparison of the recommended supplier versus the second-ranked supplier on the three criteria that matter most commercially — price competitiveness, delivery lead time, and quality certification — so the CFO has full visibility of the trade-offs involved in the recommendation. Conclude with a paragraph identifying the two or three commercial terms I should negotiate with the winning supplier before contract award, focusing on unit price, payment terms, and delivery SLA commitments, and close with a formal recommendation sentence requesting CFO approval to proceed to contract award. Keep the total memo to one page.</div>
           </div></details>
           <details><summary>Bonus E: Teams message summary</summary><div class="inner">
             <p>In Teams, ask Copilot in a chat:</p>
-            <div class="prompt-box" id="pb3-e"><button class="copy-btn" onclick="copyPrompt('pb3-e')">📋 Copy</button>Summarise the key finance and procurement risks I need to brief the CFO on before Thursday's Finance Committee. Include: Q1 budget overrun status, the TechMed contract risks (3 HIGH, 1 MEDIUM), the preferred supplier recommendation for surgical consumables, and three action items for this week. Keep it under 150 words for a Teams message.</div>
+            <div class="prompt-box" id="pb3-e"><button class="copy-btn" onclick="copyPrompt('pb3-e')">📋 Copy</button>Draft a Teams message from me, Nurul, Head of Finance, to the Group CFO as a short pre-committee brief ahead of Thursday's Finance Committee meeting. The message needs to cover four things in a way that is easy to read quickly on a phone: the Group's overall Q1 budget position with the headline RM variance figure, the TechMed contract situation summarised in two sentences covering how many HIGH-risk clauses were found and what the total worst-case financial exposure is, the outcome of the surgical consumables procurement evaluation naming the recommended supplier, and the three specific decisions or approvals I need the CFO to be prepared to make at Thursday's meeting. Write in a direct, senior-to-senior tone — professional but not overly formal as this is a Teams message between colleagues. The message should start with Hi followed by the CFO's name and a brief framing sentence, then cover the four points clearly without using numbered lists or headers as this reads awkwardly in Teams chat. Keep the total message under 160 words.</div>
           </div></details>
         </div>
       </div>
@@ -530,50 +570,6 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
       </div>
     </div>
 
-    <!-- FILES -->
-    <div id="page-files" class="page">
-      <h1 class="page-title">Workshop Files</h1>
-      <p class="subtitle">Download all 5 files to your OneDrive Documents folder before starting</p>
-      <div class="card">
-        <table class="files">
-          <tr>
-            <th>#</th><th>File Name</th><th>Type</th><th>Used In</th><th>Description</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td><a href="files/01_ContosoMedical_BudgetVariance.xlsx" download>01_ContosoMedical_BudgetVariance.xlsx</a></td>
-            <td>📊 Excel</td><td>Ex 2</td><td>12-month P&amp;L with budget vs actual, department KPI dashboard, 3 sheets</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="files/02_ContosoMedical_SupplierQuotations.xlsx" download>02_ContosoMedical_SupplierQuotations.xlsx</a></td>
-            <td>📊 Excel</td><td>Ex 2</td><td>Supplier comparison, TCO analysis, and weighted scoring guide for 4 suppliers</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><a href="files/03_ContosoMedical_VendorContract.docx" download>03_ContosoMedical_VendorContract.docx</a></td>
-            <td>📝 Word</td><td>Ex 1, 3</td><td>TechMed Healthcare Solutions contract with 4 policy-breach risk clauses embedded</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td><a href="files/04_ContosoMedical_CommitteeMeeting_Transcript.docx" download>04_ContosoMedical_CommitteeMeeting_Transcript.docx</a></td>
-            <td>📝 Word</td><td>Ex 3</td><td>Finance &amp; Procurement Committee meeting transcript with 10 action items</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td><a href="files/05_ContosoMedical_FinanceProcurementPolicies.docx" download>05_ContosoMedical_FinanceProcurementPolicies.docx</a></td>
-            <td>📝 Word</td><td>Ex 1, 3, 4</td><td>8-section policy manual covering CAPEX, procurement thresholds, contract standards, ESG</td>
-          </tr>
-        </table>
-      </div>
-      <div class="card">
-        <h2>File Upload Instructions</h2>
-        <div class="step"><div class="step-num">1</div><div class="step-body">Download all 5 files using the links above.</div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body">Open OneDrive and navigate to <strong>My Files → Documents</strong>. Create a folder called <em>Copilot Immersion</em>.</div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-body">Upload all 5 files to this folder. Wait for sync to complete (green tick icons).</div></div>
-        <div class="step"><div class="step-num">4</div><div class="step-body">In Copilot Chat, test access: type <em>@</em> and look for the files by name to confirm Copilot can see them.</div></div>
-      </div>
-    </div>
 
     <!-- TIPS -->
     <div id="page-tips" class="page">
