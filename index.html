@@ -332,48 +332,51 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <!-- EXERCISE 1 -->
     <div id="page-ex1" class="page">
       <h1 class="page-title">Exercise 1 · Researcher</h1>
-      <p class="subtitle">Tool: Researcher Agent (Copilot Chat) &nbsp;·&nbsp; 25 minutes</p>
+      <p class="subtitle">Tools: Researcher · Model Council · Copilot in Word &nbsp;·&nbsp; 25 minutes</p>
       <div class="card">
         <h2>Objective</h2>
-        <p>Use the <strong>Researcher</strong> agent in Copilot Chat to benchmark Contoso Medical's procurement thresholds against regional healthcare industry norms. Researcher goes deeper than standard Copilot Chat — it reasons across multiple sources, critiques its own output, and produces more reliable, cited answers.</p>
+        <p>Use Researcher's <strong>Critique</strong> mode to benchmark Contoso Medical's procurement governance against regional peers, then switch to <strong>Model Council</strong> for a multi-model view on healthcare finance risks, and finally use <strong>Copilot in Word</strong> to turn the research into a CFO briefing note.</p>
       </div>
       <div class="card">
         <h2>Step 1 · Open the Researcher Agent</h2>
         <div class="step"><div class="step-num">1</div><div class="step-body">Go to <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a> and click <strong>Researcher</strong> in the agents panel on the right.</div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body">Choose your reasoning mode:
+        <div class="step"><div class="step-num">2</div><div class="step-body">
+          You will use two modes across Tasks 1 and 2:
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
             <div style="background:#EFF6FF;border:2px solid #BFDBFE;border-radius:10px;padding:14px">
-              <strong style="color:var(--navy)">🔍 Critique</strong>
-              <p style="font-size:.82rem;margin-top:6px;color:var(--dgrey)">One model drafts the answer, a second model critiques and improves it. Best for getting a well-reviewed, balanced output on a single question.</p>
+              <strong style="color:var(--navy)">🔍 Critique (Auto)</strong>
+              <p style="font-size:.82rem;margin-top:6px;color:var(--dgrey)">The default mode. One model researches and drafts; a second independently reviews source reliability and evidence grounding before the final report is delivered. Every key claim is anchored to a citable source.</p>
             </div>
             <div style="background:#F0FDF4;border:2px solid #BBF7D0;border-radius:10px;padding:14px">
               <strong style="color:#065F46">⚖️ Model Council</strong>
-              <p style="font-size:.82rem;margin-top:6px;color:var(--dgrey)">Multiple models answer independently, then a judge model synthesises the best response. Best for complex research where you want diverse perspectives.</p>
+              <p style="font-size:.82rem;margin-top:6px;color:var(--dgrey)">Multiple models each run your prompt independently and produce full standalone reports. A judge model then writes a cover letter highlighting where models agree, diverge, and what unique insight each brings.</p>
             </div>
           </div>
-          <p style="margin-top:10px;font-size:.85rem"><strong>Recommended for Task 1:</strong> Try <em>Critique</em> first, then re-run with <em>Model Council</em> and compare the outputs.</p>
         </div></div>
       </div>
       <div class="card">
-        <h2>Task 1 · Industry Benchmarking</h2>
-        <p>With the Researcher agent open, use the prompt below:</p>
+        <h2>Task 1 · Critique: Industry Benchmarking</h2>
+        <p>Keep the model selector on <strong>Auto</strong> (this is Critique). Use the prompt below:</p>
         <div class="prompt-box" id="p1-1"><button class="copy-btn" onclick="copyPrompt('p1-1')">📋 Copy</button>I am the Head of Finance at Contoso Medical Group, a private hospital group in Malaysia with four facilities and approximately RM 280 million in annual operating expenditure. Our CFO has asked me to benchmark our procurement governance framework before Thursday's Finance Committee review. I need you to research how comparable private hospital groups in Southeast Asia — specifically IHH Healthcare, KPJ Healthcare, Ramsay Sime Darby, and Bangkok Dusit Medical Services — structure their procurement thresholds, including single-quote purchase limits, the value at which a formal RFQ requiring at least three supplier quotes is triggered, open tender thresholds, standard notice periods required to prevent auto-renewal of vendor contracts, and typical liability cap durations in technology and managed-services agreements. Present your findings as a comparison table with each hospital group as a column and each policy dimension as a row. In a separate paragraph below the table, highlight the two or three areas where our practice is likely to differ most significantly from regional peers, and flag any areas where tighter controls are generally considered better governance practice in the healthcare sector.</div>
-        <h3>What to look for</h3>
-        <ul style="padding-left:20px;line-height:2">
-          <li>How does our RM 10K single-quote limit compare to peers?</li>
-          <li>Is our 90-day auto-renewal notice standard or above average?</li>
-          <li>Are our liability cap standards (12 months minimum) typical?</li>
-        </ul>
+        <p style="margin-top:10px;font-size:.85rem;color:var(--dgrey)">Check the citations in the report — Critique enforces strict evidence grounding, requiring every key claim to be anchored to a reliable, citable source before the final output is produced.</p>
       </div>
       <div class="card">
-        <h2>Task 2 · Policy Manual Summary</h2>
-        <p>Attach <strong>05_ContosoMedical_FinanceProcurementPolicies.docx</strong> to the Researcher agent and use the prompt below.</p>
-        <div class="prompt-box" id="p1-2"><button class="copy-btn" onclick="copyPrompt('p1-2')">📋 Copy</button>I am reviewing the attached Contoso Medical Finance &amp; Procurement Policy Manual ahead of a Finance Committee meeting where the CFO will be asking questions about our governance thresholds. I need you to read the full document and extract a concise but complete reference summary covering the CAPEX approval authority matrix showing who must approve at each value band, the exact budget variance percentage thresholds that require escalation and the specific approver or body they must escalate to, the procurement method thresholds that determine when a single quote is sufficient versus when a formal RFQ or open tender is required along with the minimum number of suppliers at each level, and the three mandatory contract standards we must enforce on all vendor agreements covering the minimum liability cap duration, the required auto-renewal notice period, and the maximum permitted annual price escalation. For each item quote the exact policy section number. Format the output as a set of reference tables I can attach to my CFO briefing. If any of these areas are ambiguous or not explicitly addressed in the document, flag them clearly so I can raise them as policy gaps at the committee meeting.</div>
+        <h2>Task 2 · Model Council: Financial Governance Risks</h2>
+        <p>Click the model picker in Researcher and switch to <strong>Model Council</strong>. Each model will run your prompt independently and produce its own full report. Use the prompt below:</p>
+        <div class="prompt-box" id="p1-2"><button class="copy-btn" onclick="copyPrompt('p1-2')">📋 Copy</button>I am the Head of Finance at Contoso Medical Group, a private hospital group in Malaysia. I need a strategic risk assessment of the top financial governance and procurement risks facing private hospital groups in Malaysia over the next two years. Consider the following dimensions: rising medical consumable costs and supply chain concentration risk following post-pandemic sourcing shifts, regulatory pressure from the Ministry of Health on private hospital billing transparency and procurement compliance, vendor contract risk particularly around technology and managed-services agreements where liability and data ownership terms are often unfavourable, budget variance management as clinical department heads push for greater procurement autonomy, and ESG-related procurement obligations emerging from Bursa listing requirements for healthcare groups. For each risk, assess the likelihood and potential financial impact, describe how leading hospital groups in the region are mitigating it, and suggest one concrete governance action Contoso Medical should prioritise in the next six months. Present as a structured risk register with a one-paragraph executive summary at the top.</div>
+        <p style="margin-top:10px;font-size:.85rem;color:var(--dgrey)"><strong>Read the cover letter</strong> — written by a dedicated judge model that compares both reports and highlights where they agree, where they diverge, and the unique insight each model brings. That is where the real value of Model Council shows.</p>
       </div>
       <div class="card">
-        <h2>Task 3 · Gap Analysis Setup</h2>
-        <div class="prompt-box" id="p1-3"><button class="copy-btn" onclick="copyPrompt('p1-3')">📋 Copy</button>Using the Contoso Medical Finance &amp; Procurement Policy Manual I have attached, I need you to build a practical pre-sign-off contract review checklist for Finance Managers on my team who are not legal specialists and will be reviewing vendor contracts on a regular basis. The checklist should have eight specific yes or no questions covering the highest-risk contract areas we deal with most frequently — particularly liability cap adequacy, auto-renewal notice requirements, data and IP ownership, annual price escalation limits, and termination for convenience rights. For each question in the checklist, include the specific policy section number the question is derived from, clear instructions on what language to look for in the contract when checking this item, a plain-English explanation of what would constitute a policy breach, and the exact escalation action the Finance Manager should take if the answer is No. Format it as a table so it can be printed and used as a physical sign-off checklist. The tone should be practical and jargon-free — these are Finance professionals, not lawyers.</div>
-        <p style="margin-top:10px"><em>Save this checklist — you will use it in Exercise 3.</em></p>
+        <h2>Task 3 · Word: CFO Briefing Note</h2>
+        <p>First, get your Task 1 Critique research into Word:</p>
+        <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-left:4px solid var(--navy);border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.9rem">
+          <strong>Critique output:</strong> In your Researcher report, click the <strong>Export</strong> button → <strong>Convert to Word</strong>. The document saves automatically to your OneDrive. Open it from OneDrive.
+        </div>
+        <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-left:4px solid #22C55E;border-radius:8px;padding:12px 16px;margin:10px 0;font-size:.9rem">
+          <strong>Model Council output:</strong> Choose the report you prefer. Select all → Copy. Open a blank Word document, paste, and save to your OneDrive.
+        </div>
+        <p style="margin-top:12px">Open the Word document. In the <strong>Home ribbon → Copilot</strong> pane, use the prompt below to draft the CFO briefing note:</p>
+        <div class="prompt-box" id="p1-3"><button class="copy-btn" onclick="copyPrompt('p1-3')">📋 Copy</button>Based on the research content in this document, draft a one-page CFO briefing note for the Contoso Medical Group Finance Committee. Structure it as follows: open with a one-paragraph executive summary stating the overall governance maturity of our procurement framework relative to regional peers and the headline financial governance risk we face in the next 12 months. Follow with a benchmarking summary table showing where Contoso Medical stands on the key procurement threshold dimensions compared to regional peer groups, using a simple Above Peer, In Line, or Below Peer rating for each dimension. Then write a section covering the top three governance risks that require action this financial year, each with a plain-English explanation of the risk and a specific recommended action with a proposed owner and timeline. Close with a next steps paragraph recommending the two or three policy or process changes the CFO should prioritise before the next Board Audit Committee meeting. Write all narrative in formal business English suitable for a Board-level audience. Use square bracket placeholders for any data point not confirmed in the research. Target length is 350 to 400 words.</div>
       </div>
     </div>
 
