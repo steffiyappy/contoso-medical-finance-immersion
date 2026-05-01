@@ -300,14 +300,31 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <!-- EXERCISE 1 -->
     <div id="page-ex1" class="page">
       <h1 class="page-title">Exercise 1 · Researcher</h1>
-      <p class="subtitle">Tool: Copilot Chat &nbsp;·&nbsp; 25 minutes</p>
+      <p class="subtitle">Tool: Researcher Agent (Copilot Chat) &nbsp;·&nbsp; 25 minutes</p>
       <div class="card">
         <h2>Objective</h2>
-        <p>Use Copilot Chat to benchmark Contoso Medical's procurement thresholds against regional healthcare industry norms, and to summarise the key policy principles from the Policy Manual so you walk into Thursday's Finance Committee prepared.</p>
+        <p>Use the <strong>Researcher</strong> agent in Copilot Chat to benchmark Contoso Medical's procurement thresholds against regional healthcare industry norms. Researcher goes deeper than standard Copilot Chat — it reasons across multiple sources, critiques its own output, and produces more reliable, cited answers.</p>
       </div>
       <div class="card">
-        <h2>Task 1, Industry Benchmarking</h2>
-        <p>Open <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a> and use the prompt below to research healthcare procurement benchmarks.</p>
+        <h2>Step 1 · Open the Researcher Agent</h2>
+        <div class="step"><div class="step-num">1</div><div class="step-body">Go to <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a> and click <strong>Researcher</strong> in the agents panel on the right.</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body">Choose your reasoning mode:
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
+            <div style="background:#EFF6FF;border:2px solid #BFDBFE;border-radius:10px;padding:14px">
+              <strong style="color:var(--navy)">🔍 Critique</strong>
+              <p style="font-size:.82rem;margin-top:6px;color:var(--dgrey)">One model drafts the answer, a second model critiques and improves it. Best for getting a well-reviewed, balanced output on a single question.</p>
+            </div>
+            <div style="background:#F0FDF4;border:2px solid #BBF7D0;border-radius:10px;padding:14px">
+              <strong style="color:#065F46">⚖️ Model Council</strong>
+              <p style="font-size:.82rem;margin-top:6px;color:var(--dgrey)">Multiple models answer independently, then a judge model synthesises the best response. Best for complex research where you want diverse perspectives.</p>
+            </div>
+          </div>
+          <p style="margin-top:10px;font-size:.85rem"><strong>Recommended for Task 1:</strong> Try <em>Critique</em> first, then re-run with <em>Model Council</em> and compare the outputs.</p>
+        </div></div>
+      </div>
+      <div class="card">
+        <h2>Task 1 · Industry Benchmarking</h2>
+        <p>With the Researcher agent open, use the prompt below:</p>
         <div class="prompt-box" id="p1-1"><button class="copy-btn" onclick="copyPrompt('p1-1')">📋 Copy</button>I work in Finance at a private hospital group in Malaysia. Summarise best-practice procurement thresholds for private healthcare groups in Southeast Asia, covering: single-quote limits, RFQ/tender thresholds, and standard auto-renewal notice periods for vendor contracts. Present your answer as a comparison table and highlight where practices vary by hospital group size.</div>
         <h3>What to look for</h3>
         <ul style="padding-left:20px;line-height:2">
@@ -315,18 +332,19 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
           <li>Is our 90-day auto-renewal notice standard or above average?</li>
           <li>Are our liability cap standards (12 months minimum) typical?</li>
         </ul>
+        <p style="margin-top:10px;font-size:.85rem;color:var(--dgrey)"><strong>Discussion:</strong> Did Critique and Model Council give different answers? Which did you trust more and why?</p>
       </div>
       <div class="card">
-        <h2>Task 2, Policy Manual Summary</h2>
-        <p>Attach the Policy Manual file (05_ContosoMedical_FinanceProcurementPolicies.docx) to Copilot Chat and use the prompt below.</p>
+        <h2>Task 2 · Policy Manual Summary</h2>
+        <p>Attach <strong>05_ContosoMedical_FinanceProcurementPolicies.docx</strong> to the Researcher agent and use the prompt below.</p>
         <div class="prompt-box" id="p1-2"><button class="copy-btn" onclick="copyPrompt('p1-2')">📋 Copy</button>Using the attached Finance &amp; Procurement Policy Manual, provide a structured one-page executive summary covering: (1) CAPEX approval authority thresholds, (2) budget variance escalation rules, (3) procurement tender thresholds, and (4) the three most important contract standards (liability cap, auto-renewal notice, price escalation). Format as a table for each section.</div>
         <h3>Discussion</h3>
         <p>Share your summary with the group. Does everyone have the same three contract standards? What surprised you?</p>
       </div>
       <div class="card">
-        <h2>Task 3, Gap Analysis Setup</h2>
+        <h2>Task 3 · Gap Analysis Setup</h2>
         <div class="prompt-box" id="p1-3"><button class="copy-btn" onclick="copyPrompt('p1-3')">📋 Copy</button>Based on the Policy Manual I attached, draft five questions I should ask when reviewing any new vendor contract to ensure it complies with Contoso Medical's policies. Make the questions specific enough that a non-lawyer Finance Manager could use them as a checklist.</div>
-        <p style="margin-top:10px"><em>Save this checklist, you will use it in Exercise 3.</em></p>
+        <p style="margin-top:10px"><em>Save this checklist — you will use it in Exercise 3.</em></p>
       </div>
     </div>
 
