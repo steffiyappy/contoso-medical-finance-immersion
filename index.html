@@ -198,7 +198,7 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
         <h2>Workshop Format</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:8px">
           <div style="background:#D1FAE5;border-radius:8px;padding:14px;text-align:center">
-            <div style="font-size:1.5rem">🎯</div><strong>4 Exercises</strong><br><small>Hands-on labs</small>
+            <div style="font-size:1.5rem">🎯</div><strong>4 Exercises</strong><br><small>15+30+30+20 min</small>
           </div>
           <div style="background:#FEE2E2;border-radius:8px;padding:14px;text-align:center">
             <div style="font-size:1.5rem">🤖</div><strong>Agent Builder</strong><br><small>Build your agent</small>
@@ -241,7 +241,7 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
           <!-- EX 1 -->
           <div style="margin-bottom:12px">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 1 &nbsp;·&nbsp; 25 min</span>
+              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 1 &nbsp;·&nbsp; 15 min</span>
               <span style="font-size:12px;font-weight:700;color:var(--text)">Researcher + Word</span>
             </div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
@@ -327,7 +327,7 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
           <!-- EX 3 -->
           <div style="margin-bottom:12px">
             <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
-              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 3 &nbsp;·&nbsp; 35 min</span>
+              <span style="background:#0f2545;color:#fff;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px">EXERCISE 3 &nbsp;·&nbsp; 30 min</span>
               <span style="font-size:12px;font-weight:700;color:var(--text)">Contract &amp; Reporting</span>
             </div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
@@ -560,7 +560,7 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <!-- EXERCISE 3 -->
     <div id="page-ex3" class="page">
       <h1 class="page-title">Exercise 3 · Contract &amp; Reporting</h1>
-      <p class="subtitle">Tools: Copilot in Word · Copilot in PowerPoint · Cowork &nbsp;·&nbsp; 35 minutes</p>
+      <p class="subtitle">Tools: Copilot in Word · Copilot in PowerPoint · Cowork &nbsp;·&nbsp; 30 minutes</p>
       <div class="card">
         <h2>Objective</h2>
         <p>Review the TechMed vendor contract for policy breaches using Copilot in Word, then turn your findings into a Finance Committee presentation using Copilot in PowerPoint, and finally use Cowork to delegate three wrap-up tasks to Copilot simultaneously.</p>
@@ -593,98 +593,73 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <!-- EXERCISE 4 -->
     <div id="page-ex4" class="page">
       <h1 class="page-title">Exercise 4 · Agent Builder</h1>
-      <p class="subtitle">Tool: Microsoft 365 Agent Builder &nbsp;·&nbsp; 35 minutes</p>
+      <p class="subtitle">Tool: Microsoft 365 Agent Builder &nbsp;·&nbsp; 20 minutes</p>
       <div class="card">
         <h2>Objective</h2>
-        <p>Use the built-in Agent Builder in Microsoft 365 Copilot to create an agent grounded in the Contoso Medical Finance &amp; Procurement Policy Manual, so your team can get instant, accurate policy answers without searching through 40 pages of documentation.</p>
-        <p style="margin-top:10px">Choose one of the three agent options below, then follow the build guide.</p>
+        <p>Use the built-in <strong>Agent Builder</strong> in Microsoft 365 Copilot to build a <strong>Finance Policy Advisor</strong> agent in under 20 minutes — grounded in the Contoso Medical Finance &amp; Procurement Policy Manual, so anyone on the team can get instant, policy-accurate answers without searching through 40 pages of documentation.</p>
       </div>
       <div class="card">
-        <h2>Choose Your Agent</h2>
-        <div class="agent-grid">
-          <div class="agent-card" id="agent-a" onclick="selectAgent('a')">
-            <div style="font-size:1.8rem">📚</div>
-            <h3 style="color:var(--navy);margin:8px 0 4px">Finance Policy Advisor</h3>
-            <p style="font-size:.83rem;color:var(--dgrey)">Answers questions about approval thresholds, escalation rules, and procurement policy. Best for Finance team daily use.</p>
-            <span class="badge" style="margin-top:10px">Recommended</span>
+        <h2>How Agent Builder works</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px">
+          <div style="background:#EFF6FF;border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:1.4rem">💬</div>
+            <strong style="font-size:.85rem;display:block;margin:4px 0;color:#1e3a5f">1. Describe</strong>
+            <p style="font-size:.78rem;color:var(--dgrey);margin:0">Type what you want the agent to do — Copilot writes the name, description &amp; instructions for you</p>
           </div>
-          <div class="agent-card" id="agent-b" onclick="selectAgent('b')">
-            <div style="font-size:1.8rem">🛒</div>
-            <h3 style="color:var(--navy);margin:8px 0 4px">Procurement Policy Agent</h3>
-            <p style="font-size:.83rem;color:var(--dgrey)">Guides procurement staff through tender requirements, supplier evaluation, and ESG scoring. Best for Procurement team use.</p>
-            <span class="badge amber" style="margin-top:10px">Intermediate</span>
+          <div style="background:#F0FDF4;border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:1.4rem">⚙️</div>
+            <strong style="font-size:.85rem;display:block;margin:4px 0;color:#15803d">2. Configure</strong>
+            <p style="font-size:.78rem;color:var(--dgrey);margin:0">Add your knowledge files, turn on Word/Excel/PowerPoint creation, images &amp; code interpreter</p>
           </div>
-          <div class="agent-card" id="agent-c" onclick="selectAgent('c')">
-            <div style="font-size:1.8rem">⚠️</div>
-            <h3 style="color:var(--navy);margin:8px 0 4px">Contract Intelligence Assistant</h3>
-            <p style="font-size:.83rem;color:var(--dgrey)">Reviews contract clauses against policy standards, flags deviations, and suggests compliant language. Best for Finance + Legal.</p>
-            <span class="badge red" style="margin-top:10px">Advanced</span>
+          <div style="background:#FFF7ED;border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:1.4rem">🧪</div>
+            <strong style="font-size:.85rem;display:block;margin:4px 0;color:#b45309">3. Test</strong>
+            <p style="font-size:.78rem;color:var(--dgrey);margin:0">Chat with your agent in the preview pane — refine the instructions until it behaves correctly</p>
           </div>
-        </div>
-        <div id="agent-detail-a" class="agent-detail">
-          <h3>📚 Finance Policy Advisor, Build Guide</h3>
-          <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Open Agent Builder</strong> — go to <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a>, then click <strong>Create an agent</strong> in the right-hand panel.</div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Describe your agent</strong> — type this prompt and let Copilot generate the name, description and instructions for you:
-            <div class="prompt-box" id="pa-inst"><button class="copy-btn" onclick="copyPrompt('pa-inst')">📋 Copy</button>Create a Finance Policy Advisor agent for Contoso Medical that answers questions about our internal finance and procurement policies. It should always cite the specific policy section number, never guess beyond what the policy states, flag any requests that may require CFO or Board approval, and use plain English for Finance and Procurement staff.</div>
-            <small style="color:var(--dgrey);margin-top:6px;display:block">Review the generated name, description and instructions. Adjust if needed, then click <strong>Next</strong>.</small>
-          </div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Configure tab</strong> — click the <strong>Configure</strong> tab and set the following:
-            <ul style="padding-left:18px;margin-top:8px;line-height:2">
-              <li><strong>Knowledge:</strong> Upload <em>05_ContosoMedical_FinanceProcurementPolicies.docx</em> or link from SharePoint/OneDrive</li>
-              <li>✅ Enable <strong>Create and edit files</strong> (Word, PowerPoint, Excel)</li>
-              <li>✅ Enable <strong>Create images</strong></li>
-              <li>✅ Enable <strong>Code interpreter</strong> (for data analysis tasks)</li>
-            </ul>
-          </div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Test your agent</strong> with these prompts:
-            <div class="prompt-box" id="pa-t1" style="margin-top:8px"><button class="copy-btn" onclick="copyPrompt('pa-t1')">📋 Copy</button>What is the approval authority for a CAPEX item of RM 350,000?</div>
-            <div class="prompt-box" id="pa-t2"><button class="copy-btn" onclick="copyPrompt('pa-t2')">📋 Copy</button>A department head wants to buy RM 80,000 of equipment from a single supplier without a tender. Is this allowed?</div>
-            <div class="prompt-box" id="pa-t3"><button class="copy-btn" onclick="copyPrompt('pa-t3')">📋 Copy</button>Our vendor contract has a 60-day auto-renewal clause and a 6-month liability cap. Are either of these compliant with our policy?</div>
-          </div></div>
-          <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Create &amp; Share:</strong> Click <strong>Create</strong> to save your agent. Share the link with your team so they can use it directly in Copilot Chat.</div></div>
-        </div>
-        <div id="agent-detail-b" class="agent-detail">
-          <h3>🛒 Procurement Policy Agent, Build Guide</h3>
-          <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Open Agent Builder</strong> — go to <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a>, then click <strong>Create an agent</strong> in the right-hand panel.</div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Describe your agent:</strong>
-            <div class="prompt-box" id="pb-inst"><button class="copy-btn" onclick="copyPrompt('pb-inst')">📋 Copy</button>Create a Procurement Policy Agent for Contoso Medical that helps procurement staff determine the correct process for any purchase. It should tell users which process applies (single quote, RFQ, or open tender), how many suppliers are required, what approval authority is needed, and what documentation to prepare. It should flag potential order-splitting and remind users to check ISO 13485 certification for medical devices.</div>
-            <small style="color:var(--dgrey);margin-top:6px;display:block">Review the generated instructions, then click <strong>Next</strong>.</small>
-          </div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Configure tab:</strong>
-            <ul style="padding-left:18px;margin-top:8px;line-height:2">
-              <li><strong>Knowledge:</strong> Upload Files 02 (Supplier Quotations) and 05 (Policy Manual)</li>
-              <li>✅ Enable <strong>Create and edit files</strong></li>
-              <li>✅ Enable <strong>Code interpreter</strong></li>
-            </ul>
-          </div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Test prompts:</strong>
-            <div class="prompt-box" id="pb-t1" style="margin-top:8px"><button class="copy-btn" onclick="copyPrompt('pb-t1')">📋 Copy</button>I need to purchase RM 45,000 of surgical gloves. What procurement process do I follow?</div>
-            <div class="prompt-box" id="pb-t2"><button class="copy-btn" onclick="copyPrompt('pb-t2')">📋 Copy</button>We have three separate purchase requests for the same consumable from the same department totalling RM 35,000. Each individual request is below RM 15,000. What should I flag?</div>
-          </div></div>
-          <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Create &amp; Share:</strong> Click <strong>Create</strong> to save and share with your team.</div></div>
-        </div>
-        <div id="agent-detail-c" class="agent-detail">
-          <h3>⚠️ Contract Intelligence Assistant, Build Guide</h3>
-          <div class="step"><div class="step-num">1</div><div class="step-body"><strong>Open Agent Builder</strong> — go to <a href="https://m365.cloud.microsoft/chat" target="_blank">Copilot Chat</a>, then click <strong>Create an agent</strong> in the right-hand panel.</div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-body"><strong>Describe your agent:</strong>
-            <div class="prompt-box" id="pc-inst"><button class="copy-btn" onclick="copyPrompt('pc-inst')">📋 Copy</button>Create a Contract Intelligence Assistant for Contoso Medical that reviews vendor contracts against our internal policy standards. For each deviation it finds, it should state the clause number, describe the issue, quote the Contoso policy standard with section reference, estimate the financial or risk exposure, and suggest a compliant alternative clause. It should rate each deviation as HIGH, MEDIUM, or LOW risk and always err on the side of caution.</div>
-            <small style="color:var(--dgrey);margin-top:6px;display:block">Review the generated instructions, then click <strong>Next</strong>.</small>
-          </div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-body"><strong>Configure tab:</strong>
-            <ul style="padding-left:18px;margin-top:8px;line-height:2">
-              <li><strong>Knowledge:</strong> Upload File 03 (TechMed Contract) and File 05 (Policy Manual)</li>
-              <li>✅ Enable <strong>Create and edit files</strong> (to output risk summary docs)</li>
-              <li>✅ Enable <strong>Create images</strong></li>
-            </ul>
-          </div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-body"><strong>Test prompt:</strong>
-            <div class="prompt-box" id="pc-t1" style="margin-top:8px"><button class="copy-btn" onclick="copyPrompt('pc-t1')">📋 Copy</button>Review the TechMed contract and identify all clauses that deviate from Contoso Medical's standard contract policy. Rate each deviation as HIGH, MEDIUM, or LOW risk. What is the total financial exposure from all HIGH-risk deviations?</div>
-          </div></div>
-          <div class="step"><div class="step-num">5</div><div class="step-body"><strong>Create &amp; Share:</strong> Click <strong>Create</strong> to save and share with your Finance and Legal teams.</div></div>
+          <div style="background:#FDF4FF;border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:1.4rem">🚀</div>
+            <strong style="font-size:.85rem;display:block;margin:4px 0;color:#7c3aed">4. Create &amp; Share</strong>
+            <p style="font-size:.78rem;color:var(--dgrey);margin:0">Click Create — your agent is live. Share the link with your team to use directly in Copilot Chat</p>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="card">
+        <h2>📚 Build: Finance Policy Advisor</h2>
+        <p style="margin-bottom:16px;color:var(--dgrey);font-size:.9rem">Answers questions about approval thresholds, escalation rules, and procurement policy. Grounded in your internal policy document — it only answers from what the policy states.</p>
 
+        <div class="step"><div class="step-num">1</div><div class="step-body">
+          <strong>Open Agent Builder</strong> — go to <a href="https://m365.cloud.microsoft/chat" target="_blank">M365 Copilot Chat</a>, then click <strong>Create an agent</strong> in the right-hand panel. You will land on the <strong>Describe</strong> tab.
+        </div></div>
+
+        <div class="step"><div class="step-num">2</div><div class="step-body">
+          <strong>Describe your agent</strong> — paste the prompt below into the Describe box. Agent Builder will automatically generate the agent name, description, and full instructions — no manual setup needed.
+          <div class="prompt-box" id="pa-inst"><button class="copy-btn" onclick="copyPrompt('pa-inst')">📋 Copy</button>I want to build a Finance Policy Advisor agent for Contoso Medical Group that helps the Finance and Procurement teams get fast, accurate answers to policy questions without having to search through the full policy manual. The agent should always cite the specific policy section number when answering, never guess or answer beyond what the policy document states, flag any request that is likely to require CFO or Board approval based on the approval thresholds in the policy, and respond in plain English suitable for finance staff who are not legal experts. When a question falls outside the scope of the policy document, the agent should say so clearly and suggest who to contact for guidance rather than attempting an answer.</div>
+          <small style="color:var(--dgrey);margin-top:6px;display:block">✅ Review the generated name, description and instructions. Adjust wording if needed. Then click the <strong>Configure</strong> tab at the top.</small>
+        </div></div>
+
+        <div class="step"><div class="step-num">3</div><div class="step-body">
+          <strong>Configure tab</strong> — click <strong>Configure</strong> in the tab bar and set the following:
+          <ul style="padding-left:18px;margin-top:8px;line-height:2.2">
+            <li><strong>Knowledge:</strong> Click <em>Add knowledge</em> → upload <strong>05_ContosoMedical_FinanceProcurementPolicies.docx</strong> (or paste the SharePoint/OneDrive link)</li>
+            <li>✅ Toggle on <strong>Create and edit Word, PowerPoint, Excel files</strong></li>
+            <li>✅ Toggle on <strong>Create images</strong></li>
+            <li>✅ Toggle on <strong>Code interpreter</strong> (enables data analysis tasks)</li>
+          </ul>
+        </div></div>
+
+        <div class="step"><div class="step-num">4</div><div class="step-body">
+          <strong>Test in the preview pane</strong> — use the right-hand chat preview to test these prompts:
+          <div class="prompt-box" id="pa-t1" style="margin-top:8px"><button class="copy-btn" onclick="copyPrompt('pa-t1')">📋 Copy</button>What is the approval authority for a capital expenditure item of RM 350,000 — can a department head approve this or does it require CFO sign-off?</div>
+          <div class="prompt-box" id="pa-t2"><button class="copy-btn" onclick="copyPrompt('pa-t2')">📋 Copy</button>A department head wants to purchase RM 80,000 of medical equipment from a single supplier without going to open tender. Is this allowed under our procurement policy, and if not, what process should be followed?</div>
+          <div class="prompt-box" id="pa-t3"><button class="copy-btn" onclick="copyPrompt('pa-t3')">📋 Copy</button>We are reviewing a vendor contract that has a 60-day auto-renewal notice period and a liability cap of six months' fees. Are either of these terms compliant with our standard contract policy, and what is the required standard for each?</div>
+          <small style="color:var(--dgrey);margin-top:8px;display:block">💡 Check that the agent cites a specific policy section in each answer. If it doesn't, go back to Configure and refine the instructions.</small>
+        </div></div>
+
+        <div class="step"><div class="step-num">5</div><div class="step-body">
+          <strong>Create &amp; Share</strong> — click <strong>Create</strong> to publish your agent. Copy the agent link and share it with your Finance and Procurement teams — they can access it directly in M365 Copilot Chat, no setup required.
+        </div></div>
+      </div>
+    </div>
 
     <!-- USE CASES -->
     <div id="page-usecases" class="page">
