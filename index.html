@@ -799,6 +799,7 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
 
 <script>
 const HASH = "3456a9f5f4117242fc3e607a2956407fd6e58c34a3776dce2dd6ce5f921938c0";
+const STORAGE_KEY = "cmfi_auth";
 
 function sha256(str){
   const bytes = new TextEncoder().encode(str);
@@ -807,12 +808,17 @@ function sha256(str){
   );
 }
 
+function grantAccess(){
+  document.getElementById("lock").style.display="none";
+  document.getElementById("app").style.display="flex";
+}
+
 function unlock(){
   const pw = document.getElementById("pw").value;
   sha256(pw).then(h => {
     if(h === HASH){
-      document.getElementById("lock").style.display="none";
-      document.getElementById("app").style.display="flex";
+      sessionStorage.setItem(STORAGE_KEY, h);
+      grantAccess();
     } else {
       document.getElementById("pw-err").textContent = "Incorrect password. Please try again.";
       document.getElementById("pw").value="";
@@ -820,6 +826,12 @@ function unlock(){
     }
   });
 }
+
+// Auto-unlock if already authenticated this session
+(function(){
+  const stored = sessionStorage.getItem(STORAGE_KEY);
+  if(stored === HASH) grantAccess();
+})();
 
 function show(page){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
