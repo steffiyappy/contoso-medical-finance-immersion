@@ -22,10 +22,15 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:#F1F5F9;color:var(--
 #lock-box img{width:72px;margin-bottom:16px}
 #lock-box h2{color:var(--navy);font-size:1.3rem;margin-bottom:6px}
 #lock-box p{color:var(--dgrey);font-size:.9rem;margin-bottom:20px}
-#pw{width:100%;padding:10px 14px;border:2px solid var(--mgrey);border-radius:8px;
-  font-size:1rem;outline:none;transition:border .2s}
+#pw-wrap{position:relative;width:100%}
+#pw{width:100%;padding:10px 40px 10px 14px;border:2px solid var(--mgrey);border-radius:8px;
+  font-size:1rem;outline:none;transition:border .2s;box-sizing:border-box}
 #pw:focus{border-color:var(--blue)}
-#lock-box button{margin-top:14px;width:100%;padding:11px;background:var(--blue);
+#pw-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  background:none;border:none;cursor:pointer;padding:0;margin:0;width:auto;
+  font-size:1.1rem;color:var(--dgrey);line-height:1}
+#pw-toggle:hover{color:var(--blue)}
+#lock-box>button{margin-top:14px;width:100%;padding:11px;background:var(--blue);
   color:#fff;border:none;border-radius:8px;font-size:1rem;cursor:pointer;transition:background .2s}
 #lock-box button:hover{background:var(--navy)}
 #pw-err{color:var(--red);font-size:.85rem;margin-top:10px;min-height:18px}
@@ -151,7 +156,10 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
     <div style="font-size:3rem">🏥</div>
     <h2>Contoso Medical<br>Copilot Immersion</h2>
     <p>Finance &amp; Procurement Workshop<br>Enter the session password to continue.</p>
-    <input id="pw" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')unlock()">
+    <div id="pw-wrap">
+      <input id="pw" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')unlock()">
+      <button id="pw-toggle" type="button" onclick="togglePw()" title="Show/hide password">👁️</button>
+    </div>
     <button onclick="unlock()">Enter ›</button>
     <div id="pw-err"></div>
   </div>
@@ -817,6 +825,13 @@ function grantAccess(){
   document.getElementById("app").style.display="block";
   const page = location.hash.replace('#','') || 'overview';
   show(page, false);
+}
+
+function togglePw(){
+  const inp = document.getElementById("pw");
+  const btn = document.getElementById("pw-toggle");
+  if(inp.type === "password"){ inp.type = "text"; btn.textContent = "🙈"; }
+  else { inp.type = "password"; btn.textContent = "👁️"; }
 }
 
 function unlock(){
