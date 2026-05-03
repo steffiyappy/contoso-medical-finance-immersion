@@ -848,7 +848,9 @@ function show(page){
 function copyPrompt(id){
   const el = document.getElementById(id);
   const btn = el.querySelector(".copy-btn");
-  const text = el.textContent.replace("📋 Copy","").trim();
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll(".copy-btn,.gcse-tags").forEach(n=>n.remove());
+  const text = clone.textContent.trim();
   navigator.clipboard.writeText(text).then(()=>{
     btn.textContent="✅ Copied!";
     setTimeout(()=>{btn.textContent="📋 Copy";}, 2000);
