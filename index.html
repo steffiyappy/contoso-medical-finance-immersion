@@ -155,7 +155,7 @@ table.risk td{padding:7px 11px;border-bottom:1px solid var(--mgrey)}
 #sidebar-overlay.show{display:block}
 
 @media(max-width:768px){
-  #hamburger{display:block}
+  #hamburger.unlocked{display:block}
   #sidebar{transform:translateX(-100%);transition:transform .25s ease;z-index:9999}
   #sidebar.open{transform:translateX(0)}
   #main{margin-left:0;padding:60px 16px 24px}
@@ -861,6 +861,8 @@ function sha256(str){
 function grantAccess(){
   document.getElementById("lock").style.display="none";
   document.getElementById("app").style.display="block";
+  const hb = document.getElementById("hamburger");
+  if(hb){ hb.classList.add("unlocked"); hb.style.display=""; }
   const page = location.hash.replace('#','') || 'overview';
   show(page, false);
 }
